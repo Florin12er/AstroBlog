@@ -1,0 +1,24 @@
+---
+import Switch from "./Switch.astro";
+interface Props {
+  elements: string[];
+}
+
+const { elements } = Astro.props;
+---
+
+<div class="navbar">
+    <ul class="navbar-center">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        {elements.map(element => (
+            <li>
+                <a href={`/${element.toLowerCase()}`}>
+                    {element}
+                </a>
+            </li>
+        ))}
+    </ul>
+    <Switch />
+</div>

@@ -1,0 +1,40 @@
+// Footer
+.footer {
+  flex-shrink: 0;
+}
+.footer-content {
+  border-top: 1px solid #ccc;
+  padding: 1rem;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  gap: 1rem;
+}
+
+// Copyright
+.copyright {
+  text-align: center;
+}
+
+// Links
+.social-link {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.quick-link {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.quick-link a {
+  text-decoration: none;
+  color: inherit;
+}
+.quick-link a:hover {
+  text-decoration: underline;
+}

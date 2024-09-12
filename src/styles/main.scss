@@ -1,0 +1,25 @@
+
+@import "mixins.scss";
+@import "variables.scss";
+@import "navbar.scss";
+@import "footer.scss";
+@import "theme-toggle.scss";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.site-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  flex: 1 0 auto;
+}
+
+

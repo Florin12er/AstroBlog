@@ -1,0 +1,36 @@
+---
+
+import * as Icon from '@astropub/icons'
+
+interface Props {
+copyright: string;
+quickLinks: string[];
+}
+
+const { copyright, quickLinks } = Astro.props;
+---
+<div class="footer-content">
+    <div class="footer-grid">
+        <div class="quick-link">
+            <li class="quick-links"><a href="/">Home</a></li>
+            <li class="quick-link">{quickLinks.map(link => <a href={link.toLowerCase()}>{link}</a>)}</li>
+        </div>
+        <div class="social-links">
+            <div class="social-link">
+                <Icon.GitHubLogo size="24" class="social-icon" />
+                <div>
+                    Github
+                </div>
+            </div>
+            <div class="social-link">
+                <Icon.TwitterLogo size="24" class="social-icon" />
+                <div>Twitter</div>
+            </div>
+            <div class="social-link">
+                <Icon.EnvelopeClosed size="24" class="social-icon" />
+                <div>Email</div>
+            </div>
+        </div>
+    </div>
+    <p class="copyright">{copyright}</p>
+</div>

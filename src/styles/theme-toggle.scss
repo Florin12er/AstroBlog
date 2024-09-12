@@ -1,0 +1,51 @@
+#themeToggle {
+  @include center();
+  @include size(40px, 40px);
+  border-radius: 50%;
+  border: none;
+  background-color: $theme-toggle-bg-color;
+  color:  $theme-toggle-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#themeToggle:hover {
+  background-color: $theme-toggle-hover-color;
+  transform: scale(1.05);
+}
+
+#themeToggle:active {
+  transform: scale(0.95);
+}
+
+.dark-icon,
+.light-icon {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dark-icon {
+  opacity: 0;
+  position: absolute;
+  transform: rotate(-30deg) scale(0.9);
+}
+
+.light-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+:global(.dark) #themeToggle {
+  background-color: $global-bg-color;
+  color: $global-text-color;
+}
+
+:global(.dark) .dark-icon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+:global(.dark) .light-icon {
+  opacity: 0;
+  transform: rotate(30deg) scale(0.9);
+}
